@@ -1,0 +1,12 @@
+services:
+  - type: web
+    name: secret-santa-bot
+    env: python
+    buildCommand: ./build.sh
+    startCommand: python main.py
+    pythonVersion: 3.11.9
+    envVars:
+      - key: TELEGRAM_BOT_TOKEN
+        sync: false
+      - key: TELEGRAM_ADMIN_ID
+        sync: false
